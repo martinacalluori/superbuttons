@@ -29,7 +29,10 @@ class ViewController: UIViewController {
         let myAlert = UIAlertController(title: "Floor Preference", message: "My living room floor is?", preferredStyle: .alert)
         
         myAlert.addAction(UIAlertAction(title: "carpet", style: .default, handler: nil))
-        myAlert.addAction(UIAlertAction(title: "wood", style: .default, handler: nil))
+        myAlert.addAction(UIAlertAction(title: "wood", style: .default, handler: {
+            ACTION in
+            print("User Picked Wood")
+        }))
         
         self.present(myAlert, animated:true)
         
